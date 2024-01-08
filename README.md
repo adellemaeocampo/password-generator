@@ -13,4 +13,5 @@ https://github.com/adellemaeocampo/password-generator/assets/152781829/d64645a1-
 
 ## link
 
+Link to password generator: https://adellemaeocampo.github.io/password-generator/
 
