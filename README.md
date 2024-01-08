@@ -8,7 +8,8 @@ In thjis project we were given the task to create a website that generates a ran
 
 The image belows shows what the password generator website
 
-![horiseon website refactored](images-copy/password-generator-vid.mov)
+https://github.com/adellemaeocampo/password-generator/assets/152781829/d64645a1-ee06-4480-b155-3a185d1f3326
+
 
 ## link
 
