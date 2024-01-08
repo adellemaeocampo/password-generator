@@ -6,7 +6,7 @@ In thjis project we were given the task to create a website that generates a ran
 
 ## Usage
 
-    - The image belows shows what the password generator website
+The image belows shows what the password generator website
 
 ![horiseon website refactored](images-copy/horiseon-mockup.png)
 
