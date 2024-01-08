@@ -1,0 +1,57 @@
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+function generatePassword() {
+
+  passLen = prompt("please enter a password length (between 8 and 128 character): "); 
+
+  if(passLen < 8 || passLen >128 || isNaN(passLen) ) {
+    alert("Invalid input");
+    return;
+  }
+
+  includeLowerCase = confirm("would you like to add lower case characters to your password?");
+  includeUpperCase = confirm("would you like to add upper case characters to your password?");
+  includeNum = confirm("would you like to add numbers to your password?");
+  includeSpecialChar = confirm("would you like to add special characters to your password?");
+
+  if(!includeLowerCase && !includeUpperCase && !includeNum && !includeSpecialChar) {
+    alert("at least one of the catagories has to be chosen.");
+    return;
+  }
+
+  var lowerCaseChar = "qwertyuiopasdfghjklzxcvbnm";
+  var upperCaseChar= lowerCaseChar.toUpperCase();
+  var numbersChar = "123456789";
+  var specialChar = "!@#$%^&*()-_+={}[]|\;:'<>,.?/~`"
+
+  var charUsed = "";
+  if (includeLowerCase) charUsed +=lowerCaseChar;
+  if (includeUpperCase) charUsed += upperCaseChar;
+  if (includeNum) charUsed += numbersChar;
+  if (includeSpecialChar) charUsed += specialChar; 
+
+  var generatedPass = "";
+  for (var i=0; i<passLen; i++) {
+    var randomise = Math.floor(Math.random()* charUsed.length);
+    generatedPass += charUsed.charAt(randomise);
+  }
+  
+  return generatedPass;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+
